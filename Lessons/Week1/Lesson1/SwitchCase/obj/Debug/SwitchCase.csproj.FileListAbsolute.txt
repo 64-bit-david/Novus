@@ -1,0 +1,8 @@
+C:\Users\david\Desktop\Capita\1st week\Lesson1\SwitchCase\bin\Debug\SwitchCase.exe.config
+C:\Users\david\Desktop\Capita\1st week\Lesson1\SwitchCase\bin\Debug\SwitchCase.exe
+C:\Users\david\Desktop\Capita\1st week\Lesson1\SwitchCase\bin\Debug\SwitchCase.pdb
+C:\Users\david\Desktop\Capita\1st week\Lesson1\SwitchCase\obj\Debug\SwitchCase.csproj.AssemblyReference.cache
+C:\Users\david\Desktop\Capita\1st week\Lesson1\SwitchCase\obj\Debug\SwitchCase.csproj.SuggestedBindingRedirects.cache
+C:\Users\david\Desktop\Capita\1st week\Lesson1\SwitchCase\obj\Debug\SwitchCase.csproj.CoreCompileInputs.cache
+C:\Users\david\Desktop\Capita\1st week\Lesson1\SwitchCase\obj\Debug\SwitchCase.exe
+C:\Users\david\Desktop\Capita\1st week\Lesson1\SwitchCase\obj\Debug\SwitchCase.pdb

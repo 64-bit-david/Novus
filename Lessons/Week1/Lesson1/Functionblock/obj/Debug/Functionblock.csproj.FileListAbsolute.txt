@@ -1,0 +1,8 @@
+C:\Users\david\Desktop\Capita\1st week\Lesson1\Functionblock\bin\Debug\Functionblock.exe.config
+C:\Users\david\Desktop\Capita\1st week\Lesson1\Functionblock\bin\Debug\Functionblock.exe
+C:\Users\david\Desktop\Capita\1st week\Lesson1\Functionblock\bin\Debug\Functionblock.pdb
+C:\Users\david\Desktop\Capita\1st week\Lesson1\Functionblock\obj\Debug\Functionblock.csproj.AssemblyReference.cache
+C:\Users\david\Desktop\Capita\1st week\Lesson1\Functionblock\obj\Debug\Functionblock.csproj.SuggestedBindingRedirects.cache
+C:\Users\david\Desktop\Capita\1st week\Lesson1\Functionblock\obj\Debug\Functionblock.csproj.CoreCompileInputs.cache
+C:\Users\david\Desktop\Capita\1st week\Lesson1\Functionblock\obj\Debug\Functionblock.exe
+C:\Users\david\Desktop\Capita\1st week\Lesson1\Functionblock\obj\Debug\Functionblock.pdb

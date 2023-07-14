@@ -1,0 +1,8 @@
+C:\Users\david\Desktop\Capita\Code\Lessons\Week1\Inheritence\Inheritence\bin\Debug\Inheritence.exe.config
+C:\Users\david\Desktop\Capita\Code\Lessons\Week1\Inheritence\Inheritence\bin\Debug\Inheritence.exe
+C:\Users\david\Desktop\Capita\Code\Lessons\Week1\Inheritence\Inheritence\bin\Debug\Inheritence.pdb
+C:\Users\david\Desktop\Capita\Code\Lessons\Week1\Inheritence\Inheritence\obj\Debug\Inheritence.csproj.AssemblyReference.cache
+C:\Users\david\Desktop\Capita\Code\Lessons\Week1\Inheritence\Inheritence\obj\Debug\Inheritence.csproj.SuggestedBindingRedirects.cache
+C:\Users\david\Desktop\Capita\Code\Lessons\Week1\Inheritence\Inheritence\obj\Debug\Inheritence.csproj.CoreCompileInputs.cache
+C:\Users\david\Desktop\Capita\Code\Lessons\Week1\Inheritence\Inheritence\obj\Debug\Inheritence.exe
+C:\Users\david\Desktop\Capita\Code\Lessons\Week1\Inheritence\Inheritence\obj\Debug\Inheritence.pdb

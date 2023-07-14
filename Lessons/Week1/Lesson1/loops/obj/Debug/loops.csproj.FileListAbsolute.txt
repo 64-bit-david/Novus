@@ -1,0 +1,8 @@
+C:\Users\david\Desktop\Capita\1st week\Lesson1\loops\bin\Debug\loops.exe.config
+C:\Users\david\Desktop\Capita\1st week\Lesson1\loops\bin\Debug\loops.exe
+C:\Users\david\Desktop\Capita\1st week\Lesson1\loops\bin\Debug\loops.pdb
+C:\Users\david\Desktop\Capita\1st week\Lesson1\loops\obj\Debug\loops.csproj.AssemblyReference.cache
+C:\Users\david\Desktop\Capita\1st week\Lesson1\loops\obj\Debug\loops.csproj.SuggestedBindingRedirects.cache
+C:\Users\david\Desktop\Capita\1st week\Lesson1\loops\obj\Debug\loops.csproj.CoreCompileInputs.cache
+C:\Users\david\Desktop\Capita\1st week\Lesson1\loops\obj\Debug\loops.exe
+C:\Users\david\Desktop\Capita\1st week\Lesson1\loops\obj\Debug\loops.pdb

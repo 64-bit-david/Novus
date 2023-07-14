@@ -1,0 +1,8 @@
+C:\Users\david\Desktop\Capita\1st week\Lesson1\forloop\bin\Debug\forloop.exe.config
+C:\Users\david\Desktop\Capita\1st week\Lesson1\forloop\bin\Debug\forloop.exe
+C:\Users\david\Desktop\Capita\1st week\Lesson1\forloop\bin\Debug\forloop.pdb
+C:\Users\david\Desktop\Capita\1st week\Lesson1\forloop\obj\Debug\forloop.csproj.AssemblyReference.cache
+C:\Users\david\Desktop\Capita\1st week\Lesson1\forloop\obj\Debug\forloop.csproj.SuggestedBindingRedirects.cache
+C:\Users\david\Desktop\Capita\1st week\Lesson1\forloop\obj\Debug\forloop.csproj.CoreCompileInputs.cache
+C:\Users\david\Desktop\Capita\1st week\Lesson1\forloop\obj\Debug\forloop.exe
+C:\Users\david\Desktop\Capita\1st week\Lesson1\forloop\obj\Debug\forloop.pdb

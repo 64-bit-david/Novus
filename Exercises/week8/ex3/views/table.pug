@@ -1,0 +1,25 @@
+
+extends layout
+
+block content
+    div.container.d-flex.align-items-center.justify-content-center 
+        table.table.table-striped(style="width: 40%")
+            tr
+                th ID
+                th Name
+                th Age
+                th Delete
+
+            each item in items
+                tr
+                    td= item.ID
+                    td= item.Name
+                    td= item.Age
+                    td
+                        form(action=`/user/${item.ID}`, method="post")
+                            input(type="hidden" name="_method" value="DELETE")
+                            button(type="submit" class="btn btn-danger") Delete
+                        
+    div.mt-3(style="text-align: center")
+        a(href="/" class="btn btn-primary") Go Back to Home
+

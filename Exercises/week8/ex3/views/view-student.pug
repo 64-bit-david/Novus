@@ -1,0 +1,11 @@
+extends layout
+
+block content
+    div.container.d-flex.flex-column.align-items-center
+        h4 Pick an ID to View Student Details
+        form(action="/view-student", method="post", class="home-form-container")
+            p
+            select(name='dropDown', id='', class="form-select" style='margin: 2rem 0')
+                each item in items
+                    option(value=item.id) #{item.ID + ' ' + item.Name}
+            button(type="submit", name="action", value="view", class="btn btn-primary") View Student Details

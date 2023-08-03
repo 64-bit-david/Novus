@@ -1,0 +1,14 @@
+extends layout
+
+block content
+    div.container.d-flex.flex-column.align-items-center
+        h4 Edit Student Details
+        form(action=`/update-student/${student.ID}`, method="post", class="home-form-container")
+            p
+                label(for="name") Student Name
+                input(type="text", name="name", id="name", value=student.Name)
+            p
+                label(for="age") Student Age
+                input(type="number", name="age", id="age", value=student.Age)
+            button(type="submit", class="btn btn-primary") Save Changes
+            a(href="/view-student", class="btn btn-secondary") Cancel

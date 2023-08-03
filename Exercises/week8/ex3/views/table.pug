@@ -1,4 +1,3 @@
-
 extends layout
 
 block content
@@ -8,6 +7,7 @@ block content
                 th ID
                 th Name
                 th Age
+                th Edit
                 th Delete
 
             each item in items
@@ -16,8 +16,9 @@ block content
                     td= item.Name
                     td= item.Age
                     td
-                        form(action=`/user/${item.ID}`, method="post")
-                            input(type="hidden" name="_method" value="DELETE")
+                        a(href=`/edit-student/${item.ID}`, class="btn btn-info") Edit
+                    td
+                        form(action=`/delete-user/${item.ID}`, method="post")
                             button(type="submit" class="btn btn-danger") Delete
                         
     div.mt-3(style="text-align: center")

@@ -159,7 +159,6 @@
         private Label label1;
         private Label label2;
         private TextBox textBox2;
-        private Label answerLabel;
         private Label label3;
         private ComboBox comboBox1;
         private Button button1;

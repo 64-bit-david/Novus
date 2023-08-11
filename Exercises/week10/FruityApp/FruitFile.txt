@@ -1,0 +1,1 @@
+"Apple, 24", "Banana, 1", "Grapes, 55", "Cherry, 24", "Tangerine, 5"  ,string,pineapple: 100,nectarine: 61,Lychees: 250,string,string,peaches: 10000

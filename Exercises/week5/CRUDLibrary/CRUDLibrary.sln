@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33530.505
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRUDLibrary", "CRUDLibrary\CRUDLibrary.csproj", "{3D6C22CB-5E17-4991-9B53-005A374EB604}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRUDWebApplication", "CRUDWebApplication\CRUDWebApplication.csproj", "{02101B7B-3149-46F4-A4F1-209512F65317}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3D6C22CB-5E17-4991-9B53-005A374EB604}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D6C22CB-5E17-4991-9B53-005A374EB604}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D6C22CB-5E17-4991-9B53-005A374EB604}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D6C22CB-5E17-4991-9B53-005A374EB604}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02101B7B-3149-46F4-A4F1-209512F65317}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02101B7B-3149-46F4-A4F1-209512F65317}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02101B7B-3149-46F4-A4F1-209512F65317}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02101B7B-3149-46F4-A4F1-209512F65317}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B08D5CED-A0EF-4637-8098-EDD806399106}
+	EndGlobalSection
+EndGlobal

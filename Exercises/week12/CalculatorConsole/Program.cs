@@ -8,89 +8,91 @@ namespace CalculatorConsole
     {
         private static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to the Calculator App.");
-            Console.WriteLine("Press x to quit the application.");
+            Console.WriteLine("Hello World!");
+            //        Console.WriteLine("Welcome to the Calculator App.");
+            //        Console.WriteLine("Press x to quit the application.");
 
-            //Configure IoC container
-            var serviceProvider = new ServiceCollection()
-                .AddSingleton<IDiagnostics, DbDiagnostics>() 
-                .AddSingleton<ICalculator, Calculator>()
-                .AddScoped<CalcDiagnosticsEntities1>()
-                .BuildServiceProvider();
-             
+            //        //Configure IoC container
+            //        var serviceProvider = new ServiceCollection()
+            //            .AddSingleton<IDiagnostics, DbDiagnostics>() 
+            //            .AddSingleton<ICalculator, Calculator>()
+            //            .AddScoped<CalcDiagnosticsEntities1>()
+            //            .BuildServiceProvider();
 
 
-            var calc = serviceProvider.GetRequiredService<ICalculator>();
-            var logger = serviceProvider.GetRequiredService<IDiagnostics>();
-            bool continueCalculations = true;
 
-            while (continueCalculations)
-            {
-                int num1 = GetNumberFromUser("Enter the first number: ");
-                int num2 = GetNumberFromUser("Enter the second number: ");
+            //        var calc = serviceProvider.GetRequiredService<ICalculator>();
+            //        var logger = serviceProvider.GetRequiredService<IDiagnostics>();
+            //        bool continueCalculations = true;
 
-                Console.WriteLine("Select Operation: ");
-                Console.WriteLine("+ - Add");
-                Console.WriteLine("- - Subtract");
-                Console.WriteLine("* - Multiply");
-                Console.WriteLine("/ - Divide");
+            //        while (continueCalculations)
+            //        {
+            //            int num1 = GetNumberFromUser("Enter the first number: ");
+            //            int num2 = GetNumberFromUser("Enter the second number: ");
 
-                string operation = Console.ReadLine();
+            //            Console.WriteLine("Select Operation: ");
+            //            Console.WriteLine("+ - Add");
+            //            Console.WriteLine("- - Subtract");
+            //            Console.WriteLine("* - Multiply");
+            //            Console.WriteLine("/ - Divide");
 
-                int result;
-                switch (operation)
-                {
-                    case "+":
-                        result = calc.Add(num1, num2);
-                        logger.Log($"User performed addition: {num1} + {num2} = {result}");
-                        break;
-                    case "-":
-                        result = calc.Subtract(num1, num2);
-                        logger.Log($"User performed subtraction: {num1} - {num2} = {result}");
-                        break;
-                    case "*":
-                        result = calc.Multiply(num1, num2);
-                        logger.Log($"User performed multiplication: {num1} * {num2} = {result}");
+            //            string operation = Console.ReadLine();
 
-                        break;
-                    case "/":
-                        if (num2 == 0)
-                        {
-                            Console.WriteLine("Cannot divide by zero.");
-                            logger.Log($"User Performed Calculation Error: Cannot Divide by 0");
+            //            int result;
+            //            switch (operation)
+            //            {
+            //                case "+":
+            //                    result = calc.Add(num1, num2);
+            //                    logger.Log($"User performed addition: {num1} + {num2} = {result}");
+            //                    break;
+            //                case "-":
+            //                    result = calc.Subtract(num1, num2);
+            //                    logger.Log($"User performed subtraction: {num1} - {num2} = {result}");
+            //                    break;
+            //                case "*":
+            //                    result = calc.Multiply(num1, num2);
+            //                    logger.Log($"User performed multiplication: {num1} * {num2} = {result}");
 
-                            continue;
-                        }
-                        result = calc.Divide(num1, num2);
-                        logger.Log($"User performed division: {num1} / {num2} = {result}");
+            //                    break;
+            //                case "/":
+            //                    if (num2 == 0)
+            //                    {
+            //                        Console.WriteLine("Cannot divide by zero.");
+            //                        logger.Log($"User Performed Calculation Error: Cannot Divide by 0");
 
-                        break;
-                    default:
-                        Console.WriteLine("Invalid Operation, please try again.");
-                        continue;
-                }
+            //                        continue;
+            //                    }
+            //                    result = calc.Divide(num1, num2);
+            //                    logger.Log($"User performed division: {num1} / {num2} = {result}");
 
-                Console.WriteLine($"The result is: {result}");
+            //                    break;
+            //                default:
+            //                    Console.WriteLine("Invalid Operation, please try again.");
+            //                    continue;
+            //            }
 
-                Console.Write("Do you want to perform another calculation? (y/n) ");
-                continueCalculations = Console.ReadLine().Trim().Equals("y", StringComparison.OrdinalIgnoreCase);
-            }
+            //            Console.WriteLine($"The result is: {result}");
 
-            Console.WriteLine("Application Closed.");
-        }
+            //            Console.Write("Do you want to perform another calculation? (y/n) ");
+            //            continueCalculations = Console.ReadLine().Trim().Equals("y", StringComparison.OrdinalIgnoreCase);
+            //        }
 
-        private static int GetNumberFromUser(string prompt)
-        {
-            int number;
-            while (true)
-            {
-                Console.Write(prompt);
-                if (int.TryParse(Console.ReadLine(), out number))
-                {
-                    return number;
-                }
-                Console.WriteLine("Invalid input. Please enter a valid integer number.");
-            }
+            //        Console.WriteLine("Application Closed.");
+            //    }
+
+            //    private static int GetNumberFromUser(string prompt)
+            //    {
+            //        int number;
+            //        while (true)
+            //        {
+            //            Console.Write(prompt);
+            //            if (int.TryParse(Console.ReadLine(), out number))
+            //            {
+            //                return number;
+            //            }
+            //            Console.WriteLine("Invalid input. Please enter a valid integer number.");
+            //        }
+            //    }
         }
     }
 }

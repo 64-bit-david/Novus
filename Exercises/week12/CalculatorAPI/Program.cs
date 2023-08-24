@@ -17,8 +17,14 @@ namespace CalculatorAPI
 
             //Configure IoC container
             var serviceProvider = new ServiceCollection()
+                    //this will use entityframework db first approach to store logs
                     .AddSingleton<IDiagnostics, DbDiagnostics>()
+
+                     //this will use stored procedure store logs
+                     //this will be used by calc as it is the last IDiagnostics registered
+                     .AddSingleton<IDiagnostics>(provider => new StoredProcedureDiagnostics("Server=.\\SQLEXPRESS;Database=CalcDiagnostics;Integrated Security=True;"))
                     .AddSingleton<ICalculator, Calculator>()
+                    
                     .AddScoped<CalculatorAPI.CalcDiagnosticsEntities1>()
                     .BuildServiceProvider();
 
@@ -34,10 +40,10 @@ namespace CalculatorAPI
                 int num2 = GetNumberFromUser("Enter the second number: ");
 
                 Console.WriteLine("Select Operation: ");
-                Console.WriteLine("+ - Add");
-                Console.WriteLine("- - Subtract");
-                Console.WriteLine("* - Multiply");
-                Console.WriteLine("/ - Divide");
+                Console.WriteLine("+ --> Add");
+                Console.WriteLine("- --> Subtract");
+                Console.WriteLine("* --> Multiply");
+                Console.WriteLine("/ --> Divide");
 
                 string operation = Console.ReadLine();
 

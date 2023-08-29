@@ -71,8 +71,10 @@
     <Compile Include="Calculator.cs" />
     <Compile Include="DbDiagnostics.cs" />
     <Compile Include="Diagnostics.cs" />
+    <Compile Include="HttpClientExtension.cs" />
     <Compile Include="ICalculator.cs" />
     <Compile Include="IDiagnostics.cs" />
+    <Compile Include="IWebServiceCalculator.cs" />
     <Compile Include="Log.cs">
       <DependentUpon>LogModel.tt</DependentUpon>
     </Compile>
@@ -94,6 +96,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StoredProcedureDiagnostics.cs" />
+    <Compile Include="WebServiceCalculator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

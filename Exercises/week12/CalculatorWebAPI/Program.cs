@@ -1,4 +1,4 @@
-using CalculatorAPI; 
+using CalculatorAPI; // Make sure to include the appropriate namespace
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,6 +10,8 @@ builder.Services.AddSwaggerGen();
 
 // Register ICalculator service
 builder.Services.AddSingleton<ICalculator, Calculator>();
+
+builder.Services.AddSingleton<IDiagnostics, Diagnostics>();
 
 var app = builder.Build();
 

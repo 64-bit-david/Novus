@@ -11,6 +11,9 @@ namespace CalculatorAPI
 {
     public class Program
     {
+
+        /// THIS BLOCK IS FOR USE WITH Calculator Class
+
             //private static void Main(string[] args)
             //{
             //    Console.WriteLine("Welcome to the Calculator App.");
@@ -92,6 +95,8 @@ namespace CalculatorAPI
             //}
 
 
+
+        //THIS BLOCK IS FOR USE WITH WebServiceCalculator Class 
         private static void Main(string[] args)
         {
             Console.WriteLine("Welcome to the Calculator App.");

@@ -14,7 +14,7 @@ namespace CalculatorAPI
         private static readonly HttpClient client = new HttpClient();
 
         /// <inheritdoc/>
-        public async Task<int> AsyncAdd(HttpClient httpClient, int num1, int num2)
+        public async Task<int> Add(HttpClient httpClient, int num1, int num2)
         {
             string url = $"{CalcApiUrl}/api/calculator/add/{num1}/{num2}";
             HttpResponseMessage response = await httpClient.GetAsync(url);
@@ -31,7 +31,7 @@ namespace CalculatorAPI
         }
 
         ///<inheritdoc/>
-        public async Task<int> AsyncSubtract(HttpClient httpClient, int num1, int num2)
+        public async Task<int> Subtract(HttpClient httpClient, int num1, int num2)
         {
             string url = $"{CalcApiUrl}/api/calculator/subtract/{num1}/{num2}";
             HttpResponseMessage response = await httpClient.GetAsync(url);
@@ -48,7 +48,7 @@ namespace CalculatorAPI
         }
 
         ///<inheritdoc/>
-        public async Task<int> AsyncMultiply(HttpClient httpClient, int num1, int num2)
+        public async Task<int> Multiply(HttpClient httpClient, int num1, int num2)
         {
             string url = $"{CalcApiUrl}/api/calculator/multiply/{num1}/{num2}";
             HttpResponseMessage response = await httpClient.GetAsync(url);
@@ -65,7 +65,7 @@ namespace CalculatorAPI
         }
 
         ///<inheritdoc/>
-        public async Task<int> AsyncDivide(HttpClient httpClient, int num1, int num2)
+        public async Task<int> Divide(HttpClient httpClient, int num1, int num2)
         {
             string url = $"{CalcApiUrl}/api/calculator/divide/{num1}/{num2}";
             HttpResponseMessage response = await httpClient.GetAsync(url);

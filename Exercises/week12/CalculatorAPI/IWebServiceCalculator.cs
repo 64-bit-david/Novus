@@ -15,7 +15,7 @@ namespace CalculatorAPI
         /// <param name="num1">The first number to add.</param>
         /// <param name="num2">The second number to add.</param>
         /// <returns>The result of the addition operation.</returns>
-        Task<int> AsyncAdd(HttpClient httpClient, int num1, int num2);
+        Task<int> Add(HttpClient httpClient, int num1, int num2);
 
 
         /// <summary>
@@ -25,7 +25,7 @@ namespace CalculatorAPI
         /// <param name="num1">The number to subtract from.</param>
         /// <param name="num2">The number to subtract.</param>
         /// <returns>The result of the subtraction operation.</returns>
-        Task<int> AsyncSubtract(HttpClient httpClient, int num1, int num2);
+        Task<int> Subtract(HttpClient httpClient, int num1, int num2);
 
 
 
@@ -36,7 +36,7 @@ namespace CalculatorAPI
         /// <param name="num1">The number to subtract from.</param>
         /// <param name="num2">The number to subtract.</param>
         /// <returns>The result of the subtraction operation.</returns>
-        Task<int> AsyncMultiply(HttpClient httpClient, int num1, int num2);
+        Task<int> Multiply(HttpClient httpClient, int num1, int num2);
 
 
         /// <summary>
@@ -46,6 +46,6 @@ namespace CalculatorAPI
         /// <param name="num1">The number to subtract from.</param>
         /// <param name="num2">The number to subtract.</param>
         /// <returns>The result of the subtraction operation.</returns>
-        Task<int> AsyncDivide(HttpClient httpClient, int num1, int num2);
+        Task<int> Divide(HttpClient httpClient, int num1, int num2);
     }
 }

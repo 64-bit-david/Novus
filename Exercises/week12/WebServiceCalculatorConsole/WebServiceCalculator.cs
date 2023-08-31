@@ -1,8 +1,12 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Net.Http;
+using System.Text;
 using System.Threading.Tasks;
+using CalculatorAPI;
 
-namespace CalculatorAPI
+namespace WebServiceCalculatorConsole
 {
     /// <summary>
     /// Implements the <see cref="IWebServiceCalculator"/> interface by making HTTP requests to a calculator web service.
@@ -21,7 +25,8 @@ namespace CalculatorAPI
 
             if (response.IsSuccessStatusCode)
             {
-                int result = await response.Content.ReadAsAsyncInt();
+                string res = await response.Content.ReadAsStringAsync();
+                int result = int.Parse(res);
                 return result;
             }
             else
@@ -38,7 +43,8 @@ namespace CalculatorAPI
 
             if (response.IsSuccessStatusCode)
             {
-                int result = await response.Content.ReadAsAsyncInt();
+                string res = await response.Content.ReadAsStringAsync();
+                int result = int.Parse(res);
                 return result;
             }
             else
@@ -55,7 +61,8 @@ namespace CalculatorAPI
 
             if (response.IsSuccessStatusCode)
             {
-                int result = await response.Content.ReadAsAsyncInt();
+                string res = await response.Content.ReadAsStringAsync();
+                int result = int.Parse(res);
                 return result;
             }
             else
@@ -72,7 +79,8 @@ namespace CalculatorAPI
 
             if (response.IsSuccessStatusCode)
             {
-                int result = await response.Content.ReadAsAsyncInt();
+                string res = await response.Content.ReadAsStringAsync();
+                int result = int.Parse(res);
                 return result;
             }
             else

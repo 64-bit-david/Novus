@@ -4,66 +4,30 @@ using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+using CalculatorAPI;
 using Microsoft.Extensions.DependencyInjection;
 
-
-namespace CalculatorAPI
+namespace WebServiceCalculatorConsole
 {
-    public class Program
+    internal class Program
     {
-
-            private static void Main(string[] args)
+        private static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to the Calculator App.");
+            Console.WriteLine("Welcome to the Calculator Console App (Web Service Version).");
             Console.WriteLine("Press x to quit the application.");
 
-            // Display menu and get user's choice
-            Console.WriteLine("Select Calculator Implementation:");
-            Console.WriteLine("1. Calculator");
-            Console.WriteLine("2. WebServiceCalculator");
-            Console.Write("Enter your choice: ");
+            // Configure IoC container
+            var serviceProvider = new ServiceCollection()
+                .AddSingleton<IDiagnostics, DbDiagnostics>()
+                .AddSingleton<IDiagnostics>(provider => new StoredProcedureDiagnostics("Server=.\\SQLEXPRESS;Database=CalcDiagnostics;Integrated Security=True;"))
+                .AddScoped<IWebServiceCalculator, WebServiceCalculator>() // Use the WebServiceCalculator implementation
+                .AddScoped<CalculatorAPI.CalcDiagnosticsEntities1>()
+                .BuildServiceProvider();
 
-            string choice = Console.ReadLine().Trim();
-
-            IServiceProvider serviceProvider;
-
-            if (choice == "1")
-            {
-                Console.WriteLine("You have selected option 1: Calculator");
-
-                // Configure IoC container to use Calculator implementation
-                serviceProvider = new ServiceCollection()
-                    .AddSingleton<IDiagnostics, DbDiagnostics>()
-                    .AddSingleton<IDiagnostics>(provider => new StoredProcedureDiagnostics("Server=.\\SQLEXPRESS;Database=CalcDiagnostics;Integrated Security=True;"))
-                    .AddSingleton<ICalculator, Calculator>()
-                    .AddScoped<CalculatorAPI.CalcDiagnosticsEntities1>()
-                    .BuildServiceProvider();
-            }
-            else if (choice == "2")
-            {
-                Console.WriteLine("You have selected option 2: WebServiceCalculator");
-
-                // Configure IoC container to use WebServiceCalculator implementation
-                serviceProvider = new ServiceCollection()
-                    .AddSingleton<IDiagnostics, DbDiagnostics>()
-                    .AddSingleton<IDiagnostics>(provider => new StoredProcedureDiagnostics("Server=.\\SQLEXPRESS;Database=CalcDiagnostics;Integrated Security=True;"))
-                    .AddScoped<IWebServiceCalculator, WebServiceCalculator>()
-                    .AddScoped<CalculatorAPI.CalcDiagnosticsEntities1>()
-                    .BuildServiceProvider();
-            }
-            else
-            {
-                Console.WriteLine("Invalid choice.");
-                return;
-            }
-
-            var calc = serviceProvider.GetRequiredService<ICalculator>();
+            var webServiceCalculator = serviceProvider.GetRequiredService<IWebServiceCalculator>();
             var logger = serviceProvider.GetRequiredService<IDiagnostics>();
             bool continueCalculations = true;
 
-
-
-            //Allows the user to perform multiple calculations
             while (continueCalculations)
             {
                 int num1 = GetNumberFromUser("Enter the first number: ");
@@ -76,35 +40,31 @@ namespace CalculatorAPI
                 Console.WriteLine("/ --> Divide");
 
                 string operation = Console.ReadLine();
+
                 int result;
-
-
                 switch (operation)
                 {
                     case "+":
-                        result = calc.Add(num1, num2);
+                        result = webServiceCalculator.Add(new HttpClient(), num1, num2).Result;
                         logger.Log($"User performed addition: {num1} + {num2} = {result}");
                         break;
                     case "-":
-                        result = calc.Subtract(num1, num2);
+                        result = webServiceCalculator.Subtract(new HttpClient(), num1, num2).Result;
                         logger.Log($"User performed subtraction: {num1} - {num2} = {result}");
                         break;
                     case "*":
-                        result = calc.Multiply(num1, num2);
+                        result = webServiceCalculator.Multiply(new HttpClient(), num1, num2).Result;
                         logger.Log($"User performed multiplication: {num1} * {num2} = {result}");
-
                         break;
                     case "/":
                         if (num2 == 0)
                         {
                             Console.WriteLine("Cannot divide by zero.");
                             logger.Log($"User Performed Calculation Error: Cannot Divide by 0");
-
                             continue;
                         }
-                        result = calc.Divide(num1, num2);
+                        result = webServiceCalculator.Divide(new HttpClient(), num1, num2).Result;
                         logger.Log($"User performed division: {num1} / {num2} = {result}");
-
                         break;
                     default:
                         Console.WriteLine("Invalid Operation, please try again.");
@@ -120,12 +80,6 @@ namespace CalculatorAPI
             Console.WriteLine("Application Closed.");
         }
 
-
-
-
-        /// <summary>
-        /// Converts user input from string to int
-        /// </summary>
         private static int GetNumberFromUser(string prompt)
         {
             int number;
@@ -141,3 +95,4 @@ namespace CalculatorAPI
         }
     }
 }
+

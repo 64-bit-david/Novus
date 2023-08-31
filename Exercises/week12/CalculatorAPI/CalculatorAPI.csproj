@@ -6,7 +6,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{1C4231BE-CD4F-4ADF-B67D-551488C82EFA}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>CalculatorAPI</RootNamespace>
     <AssemblyName>CalculatorAPI</AssemblyName>
@@ -71,10 +71,8 @@
     <Compile Include="Calculator.cs" />
     <Compile Include="DbDiagnostics.cs" />
     <Compile Include="Diagnostics.cs" />
-    <Compile Include="HttpClientExtension.cs" />
     <Compile Include="ICalculator.cs" />
     <Compile Include="IDiagnostics.cs" />
-    <Compile Include="IWebServiceCalculator.cs" />
     <Compile Include="Log.cs">
       <DependentUpon>LogModel.tt</DependentUpon>
     </Compile>
@@ -93,10 +91,8 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>LogModel.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StoredProcedureDiagnostics.cs" />
-    <Compile Include="WebServiceCalculator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

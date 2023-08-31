@@ -4,9 +4,8 @@ using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
-using CalculatorAPI;
 
-namespace WebServiceCalculatorConsole
+namespace CalculatorAPI
 {
     /// <summary>
     /// Implements the <see cref="IWebServiceCalculator"/> interface by making HTTP requests to a calculator web service.

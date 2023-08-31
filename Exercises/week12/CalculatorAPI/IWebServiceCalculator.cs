@@ -5,7 +5,7 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WebServiceCalculatorConsole
+namespace CalculatorAPI
 {
     /// <summary>
     /// Represents a calculator that performs calculations using a web service

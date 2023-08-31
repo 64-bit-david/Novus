@@ -11,12 +11,18 @@ namespace WebServiceCalculatorConsole
 {
     internal class Program
     {
+
+        /// <summary>
+        /// Main entry point of the WebServiceCalculatorConsole application.
+        /// </summary>
+        /// <param name="args">Command-line arguments.</param>
         private static void Main(string[] args)
         {
             Console.WriteLine("Welcome to the Calculator Console App (Web Service Version).");
             Console.WriteLine("Press x to quit the application.");
 
             // Configure IoC container
+            //Using the stored procedure approach.
             var serviceProvider = new ServiceCollection()
                 //.AddSingleton<IDiagnostics, DbDiagnostics>()
                 .AddSingleton<IDiagnostics>(provider => new StoredProcedureDiagnostics("Server=.\\SQLEXPRESS;Database=CalcDiagnostics;Integrated Security=True;"))
@@ -80,6 +86,12 @@ namespace WebServiceCalculatorConsole
             Console.WriteLine("Application Closed.");
         }
 
+
+        /// <summary>
+        /// Gets an integer input from the user.
+        /// </summary>
+        /// <param name="prompt">The prompt message to display to the user.</param>
+        /// <returns>The integer input from the user.</returns>
         private static int GetNumberFromUser(string prompt)
         {
             int number;

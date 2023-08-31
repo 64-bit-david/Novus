@@ -10,12 +10,18 @@ namespace CalculatorConsole
 {
     internal class Program
     {
+
+        /// <summary>
+        /// Main entry point of the CalculatorConsole application.
+        /// </summary>
+        /// <param name="args">Command-line arguments.</param>
         private static void Main(string[] args)
         {
             Console.WriteLine("Welcome to the Calculator App.");
             Console.WriteLine("Press x to quit the application.");
 
             //Configure IoC container
+            //Using the EF db first approach
             var serviceProvider = new ServiceCollection()
 
                     //this will use entityframework db first approach to store logs
@@ -90,6 +96,12 @@ namespace CalculatorConsole
             Console.WriteLine("Application Closed.");
         }
 
+
+        /// <summary>
+        /// Gets an integer input from the user.
+        /// </summary>
+        /// <param name="prompt">The prompt message to display to the user.</param>
+        /// <returns>The integer input from the user.</returns>
         private static int GetNumberFromUser(string prompt)
         {
             int number;

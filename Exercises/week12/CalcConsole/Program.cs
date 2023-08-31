@@ -23,7 +23,7 @@ namespace CalculatorConsole
 
                      //this will use stored procedure store logs
                      //this will be used by calc as it is the last IDiagnostics registered
-                     .AddSingleton<IDiagnostics>(provider => new StoredProcedureDiagnostics("Server=.\\SQLEXPRESS;Database=CalcDiagnostics;Integrated Security=True;"))
+                     //.AddSingleton<IDiagnostics>(provider => new StoredProcedureDiagnostics("Server=.\\SQLEXPRESS;Database=CalcDiagnostics;Integrated Security=True;"))
 
                     .AddSingleton<ICalculator, Calculator>()
                     .AddScoped<CalculatorAPI.CalcDiagnosticsEntities1>()

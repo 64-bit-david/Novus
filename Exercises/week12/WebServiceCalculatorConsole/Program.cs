@@ -18,7 +18,7 @@ namespace WebServiceCalculatorConsole
 
             // Configure IoC container
             var serviceProvider = new ServiceCollection()
-                .AddSingleton<IDiagnostics, DbDiagnostics>()
+                //.AddSingleton<IDiagnostics, DbDiagnostics>()
                 .AddSingleton<IDiagnostics>(provider => new StoredProcedureDiagnostics("Server=.\\SQLEXPRESS;Database=CalcDiagnostics;Integrated Security=True;"))
                 .AddScoped<IWebServiceCalculator, WebServiceCalculator>() // Use the WebServiceCalculator implementation
                 .AddScoped<CalculatorAPI.CalcDiagnosticsEntities1>()
